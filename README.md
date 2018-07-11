@@ -27,7 +27,8 @@ Processing sketch that generates line art for use with a 2.5 axis (2 axis + z li
 //   your image among the free space on the canvas.
 //  
 //  Pressing space will toggle viewing the line drawing process
-//  
+//  Pressing t will toggle viewing the travel lines
+//  Pressing i will toggle viewing the loaded image
 //  Pressing Enter or Return will save an output file
 // 
 ///////////////////////////////////////
