@@ -1,10 +1,14 @@
 float X_WIDTH = 200;
 float Y_HEIGHT = 100;
-int RESOLUTION_X = 50;
-int RESOLUTION_Y = 70;
+int RESOLUTION_X = 60;
+int RESOLUTION_Y = 65;
 
 String IMG_PATH = "img\\skull.jpg";
 String OUTPUT_FILE_NAME = "output\\skull.txt";
+
+String SHADING = "SPIRAL";
+//SPIRAL
+//SQUIGGLE
 
 ///////////////////////////////////////
 // System assumes X+ is right, and Y+ is down
@@ -61,7 +65,7 @@ void setup()
   smooth();
   fill(100);
   stroke(0);
-  generateLines_Squiggle();
+  reShade();
 }
 
 void mousePressed()
@@ -84,9 +88,19 @@ void mouseReleased()
   {
     imgOffset[1] = newYOffset;
   } 
-  
-  generateLines_Squiggle();
-  
+  reShade();
+}
+
+void reShade()
+{
+  if (SHADING == "SPIRAL")
+  {
+    generateLines_Spiral();
+  }
+  if (SHADING == "SQUIGGLE")
+  {
+    generateLines_Squiggle();
+  }
 }
 
 void keyPressed()
