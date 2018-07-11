@@ -1,6 +1,7 @@
 # PlotterGen
 Processing sketch that generates line art for use with a 2.5 axis (2 axis + z lift) draw bot
-![2018-07-11_10-17-27](https://user-images.githubusercontent.com/21973290/42578037-b34712b8-84f3-11e8-9004-539feefc3ab0.png)
+<img src="https://user-images.githubusercontent.com/21973290/42578037-b34712b8-84f3-11e8-9004-539feefc3ab0.png" width="75%">
+<img src="https://user-images.githubusercontent.com/21973290/42592081-8409aa9c-8516-11e8-8b72-c117e5607a2a.png" width="75%">
 
 ## Usage
 ```
