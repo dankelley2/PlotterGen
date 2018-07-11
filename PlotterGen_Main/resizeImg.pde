@@ -1,21 +1,22 @@
 PImage ResizeImage_FitContainer(PImage image, float containerWidth_mm, float containerHeight_mm, float viewScale)
 {
-  int maxWidth_Pixels = int(containerWidth_mm * viewScale);
-  int maxHeight_Pixels = int(containerHeight_mm * viewScale);
-
-  int newWidth_Pixels;
-  int newHeight_Pixels;
+  float maxWidth_Pixels = containerWidth_mm * viewScale;
+  float maxHeight_Pixels = containerHeight_mm * viewScale;
+  
+  println("Image is: " + str((float)image.width / (float)image.height));
+  float newWidth_Pixels;
+  float newHeight_Pixels;
   if (image.width == 0 || image.height == 0) { return null; } // return null if one dimension is 0
 
   if ((float)image.width / (float)image.height > (float)maxWidth_Pixels / (float)maxHeight_Pixels)
   {
       newWidth_Pixels = maxWidth_Pixels;
-      newHeight_Pixels = image.height * int((float)newWidth_Pixels / (float)image.width);
+      newHeight_Pixels = image.height * (float)newWidth_Pixels / (float)image.width;
   }
   else if ((float)image.width / (float)image.height < (float)maxWidth_Pixels / (float)maxHeight_Pixels)
   {
       newHeight_Pixels = maxHeight_Pixels;
-      newWidth_Pixels = image.width * int((float)newHeight_Pixels / (float)image.height);
+      newWidth_Pixels = image.width * (float)newHeight_Pixels / (float)image.height;
   }
   else
   {
@@ -23,7 +24,8 @@ PImage ResizeImage_FitContainer(PImage image, float containerWidth_mm, float con
       newHeight_Pixels = (maxHeight_Pixels < maxWidth_Pixels) ? maxHeight_Pixels : maxWidth_Pixels;
   }
 
-  image.resize(newWidth_Pixels, newHeight_Pixels);
+  image.resize(int(newWidth_Pixels), int(newHeight_Pixels));
+  println("New Image is: " + str((float)image.width / (float)image.height));
   
   return image;
 }
