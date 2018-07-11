@@ -23,7 +23,7 @@ void drawMyImg()
   }
 }
 
-void drawPointMap()
+void drawPointMap(boolean viewTravel)
 {
   int progress = int(map(mouseX,0,width,0,pointMap.size()));
   //clamp values
@@ -43,7 +43,10 @@ void drawPointMap()
     linePoint p1 = pointMap.get(i);
     if (p0.liftPen)
     {
-      stroke(200,200,200);
+      if (viewTravel)
+        stroke(255,255,200);
+      else
+        noStroke();
     }
     line(imgOffset[0]+p0.x, imgOffset[1]+p0.y, imgOffset[0]+p1.x, imgOffset[1]+p1.y);
   }  
