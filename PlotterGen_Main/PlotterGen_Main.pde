@@ -1,7 +1,7 @@
 float X_WIDTH = 200;
 float Y_HEIGHT = 100;
-int RESOLUTION_X = 60;
-int RESOLUTION_Y = 65;
+int RESOLUTION_X = 100;
+int RESOLUTION_Y = 80;
 
 String IMG_PATH = "img\\skull.jpg";
 String OUTPUT_FILE_NAME = "output\\skull.txt";
@@ -32,7 +32,8 @@ String SHADING = "SPIRAL";
 //   your image among the free space on the canvas.
 //  
 //  Pressing space will toggle viewing the line drawing process
-//  
+//  Pressing t will toggle viewing the travel lines
+//  Pressing i will toggle viewing the loaded image
 //  Pressing Enter or Return will save an output file
 // 
 ///////////////////////////////////////
@@ -41,6 +42,8 @@ String SHADING = "SPIRAL";
 PImage img;
 int[] imgOffset = {0,0};
 boolean viewProgress = false;
+boolean viewTravel = true;
+boolean viewImage = true;
 
 ArrayList<linePoint> pointMap = new ArrayList();
 drawBot myBot = new drawBot(X_WIDTH,Y_HEIGHT);
@@ -53,8 +56,8 @@ float padding = 25;
 
 void settings()
 {
-  size(WIN_WIDTH + int(padding * 2), WIN_HEIGHT+ int(padding * 2));
   viewScale = WIN_WIDTH/X_WIDTH;
+  size(WIN_WIDTH + int(padding * 2), int((Y_HEIGHT * viewScale) + (padding * 2)));
 }
 
 void setup()
@@ -113,12 +116,23 @@ void keyPressed()
   {
     viewProgress = !viewProgress;
   }
+  if (key == 't')
+  {
+    viewTravel = !viewTravel;
+  }
+  if (key == 'i')
+  {
+    viewImage = !viewImage;
+  }
 }
 
 void draw()
 {
   translate(padding,padding);
   drawBackground();
-  drawMyImg();
-  drawPointMap();
+  if (viewImage)
+  {
+    drawMyImg();
+  }
+  drawPointMap(viewTravel);
 }
