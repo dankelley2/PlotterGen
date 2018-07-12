@@ -100,9 +100,13 @@ void reShade()
   {
     generateLines_Spiral();
   }
-  if (SHADING == "SQUIGGLE")
+  else if (SHADING == "SQUIGGLE")
   {
     generateLines_Squiggle();
+  }
+  else if (SHADING == "OFFSET")
+  {
+    generateLines_Offset();
   }
 }
 
