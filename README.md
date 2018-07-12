@@ -1,7 +1,21 @@
 # PlotterGen
 Processing sketch that generates line art for use with a 2.5 axis (2 axis + z lift) draw bot
-<img src="https://user-images.githubusercontent.com/21973290/42578037-b34712b8-84f3-11e8-9004-539feefc3ab0.png" width="75%">
-<img src="https://user-images.githubusercontent.com/21973290/42592081-8409aa9c-8516-11e8-8b72-c117e5607a2a.png" width="75%">
+
+### New "Squiggle" line algorithm update. Much more contrast.
+<img src="https://user-images.githubusercontent.com/21973290/42648375-b7e195a0-85d4-11e8-8b04-9472f4522215.png" width="60%">
+
+* Settings:
+  * `RESOLUTION_X = 65`
+  * `RESOLUTION_Y = 80`
+  * `SHADING = "SQUIGGLE"`
+  * Total points points generated: 11,119.
+  
+## Old "Squiggle" line algorithm.
+
+<img src="https://user-images.githubusercontent.com/21973290/42578037-b34712b8-84f3-11e8-9004-539feefc3ab0.png" width="60%">
+
+## "Spiral" line algorithm
+<img src="https://user-images.githubusercontent.com/21973290/42592081-8409aa9c-8516-11e8-8b72-c117e5607a2a.png" width="60%">
 
 ## Usage
 ```
