@@ -1,12 +1,12 @@
 float X_WIDTH = 200;
 float Y_HEIGHT = 100;
-int RESOLUTION_X = 100;
+int RESOLUTION_X = 65;
 int RESOLUTION_Y = 80;
 
 String IMG_PATH = "img\\skull.jpg";
 String OUTPUT_FILE_NAME = "output\\skull.txt";
 
-String SHADING = "SPIRAL";
+String SHADING = "SQUIGGLE";
 //SPIRAL
 //SQUIGGLE
 
