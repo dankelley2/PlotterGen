@@ -4,6 +4,7 @@ Processing sketch that generates line art for use with a 2.5 axis (2 axis + z li
 ### New "Squiggle" line algorithm update. Much more contrast.
 <img src="https://user-images.githubusercontent.com/21973290/42648375-b7e195a0-85d4-11e8-8b04-9472f4522215.png" width="60%">
 <img src="https://user-images.githubusercontent.com/21973290/42661842-6ffe1302-85fd-11e8-9108-49e1547b0658.jpeg" width="60%">
+
 * Settings:
   * `RESOLUTION_X = 65`
   * `RESOLUTION_Y = 80`
